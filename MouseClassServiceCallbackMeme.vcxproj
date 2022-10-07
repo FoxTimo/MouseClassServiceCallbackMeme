@@ -91,7 +91,12 @@
     </DriverSign>
     <Link>
       <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <Profile>false</Profile>
     </Link>
+    <ClCompile>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <DriverSign>
@@ -107,7 +112,7 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <MASM Include="mouse.asm">
